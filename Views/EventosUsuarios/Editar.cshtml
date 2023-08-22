@@ -1,0 +1,72 @@
+﻿@model Parametros_Entrada
+@{
+    ViewData["Title"] = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://bootswatch.com/5/quartz/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="d-flex justify-content-center">
+
+
+        <div class="col-md-5">
+            <div class="list-group">
+
+                <div class="list-group-item list-group-item-action flex-column align-items-start active">
+                    <form asp-action="Editar" asp-controller="EventosUsuarios" method="post">
+                        <input asp-for="idProducto" type="hidden" class="form-control">
+
+                        <div class="form-group mt-1">
+                            <input asp-for="tipoProducto" type="text" name="tipoProducto"  class="form-control">
+                            <spam asp-validation-for="tipoProducto" class="text-danger">  </spam>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <input asp-for="NombreProducto" type="text" name="NombreProducto"  class="form-control">
+                            <spam asp-validation-for="NombreProducto" class="text-danger">  </spam>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <input asp-for="claveProducto" type="text" name="claveProducto"  class="form-control">
+                            <spam asp-validation-for="claveProducto" class="text-danger">  </spam>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <input asp-for="precioProducto" type="text" name="precioProducto" placeholder="Precio de Producto" class="form-control">
+                            <spam asp-validation-for="precioProducto" class="text-danger">  </spam>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <input asp-for="razonSocialProvedor" type="text" name="razonSocialProvedor" placeholder="Razón Social del Proveedor" class="form-control">
+                            <spam asp-validation-for="razonSocialProvedor" class="text-danger">  </spam>
+                        </div>
+
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-primary btn-sm">Guardar</button>
+                            <a asp-action="Consultar" asp-controller="EventosUsuarios" class="btn btn-primary btn-sm">Regresar a consulta</a>
+                        </div>
+
+
+
+
+                    </form>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+
+
+
